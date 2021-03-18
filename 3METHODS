@@ -1,1 +1,45 @@
-input 3 methods
+import java.util.Scanner;
+interface P
+{
+    String p = "";
+    String methodP();
+}
+interface Q extends P
+{
+    String q = "";
+    String methodQ();
+}
+class   R implements Q,P
+{
+    public String methodP()
+    {
+     Scanner scan = new Scanner(System.in);
+     double fah, cel ;
+     System.out.println("input number");
+     cel=scan.nextDouble();
+     fah=(1.8*cel)+32;
+System.out.println(fah+"°F");
+return p+q;
+    }
+      public String methodQ()
+      {   
+      
+ Scanner scan = new Scanner(System.in);
+     double cel , fah;
+     System.out.println("input number");
+     fah=scan.nextDouble();
+     cel=(fah*1.8)+32;
+    System.out.println(cel+"°C");
+    return p+q;
+      }
+}
+public class IPPPPT {
+    public static void main (String args[])
+    {
+        R r = new R();
+        System.out.println(r.methodP()+r.methodQ());
+        System.out.println(r.methodQ()+r.methodP());
+    }
+
+    }
+
